@@ -1,0 +1,30 @@
+<head>
+<style>
+.container {
+  display: flex;                  /* Creates a flex container. Change values and check effects */
+  flex-direction: row;            /* Arranges items in a row (default). Change values and check effects */
+  justify-content: flrx-start; /* Spaces items horizontally. Change values and check effects */
+  align-items: stretch;            /* Aligns items vertically in the center. Change values and check effects */
+  flex-wrap: wrap;                /* Wraps items to next line if space runs out */
+  gap: 15px;                      /* Adds space between items */
+  background-color: lightgray;
+  padding: 15px;
+  height: 500px;
+}
+.item {  background-color: steelblue;  color: white;  padding: 20px;  text-align: center;
+  border-radius: 5px;  width: 200px;}
+
+.item:nth-child(2) {  order: -1;                
+/* This will move the item to appear after others. Change values and check effects(POSITIVE,NEGATIVE,0) */
+  flex: 1 1 100px;  
+/* Remove comments from this line to check effect. flex-grow: 1, flex-shrink: 1, flex-basis: 100px */
+   background-color: orange;} 
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2 (Order 1)</div>
+  <div class="item">Item 3</div>
+</div>
+</body>
